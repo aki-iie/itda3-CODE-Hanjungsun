@@ -1,0 +1,28 @@
+{
+ "n": 300,
+ "full": 254,
+ "full_pct": 84.67,
+ "cells_pct": 88.78,
+ "false_positive": 2,
+ "miss_all_none": 13,
+ "sec_mean": 4.81,
+ "sec_median": 3.74,
+ "sec_max": 21.1,
+ "min_4core_500": 10.0,
+ "stages": {
+  "1": 10,
+  "0": 270,
+  "1.5": 3,
+  "2": 4,
+  "4": 11,
+  "3": 2
+ },
+ "name": "V2_R4_regexhit_nobreak",
+ "cfg": {
+  "thresh": 0.3,
+  "box": 0.5,
+  "unclip": 1.6
+ },
+ "budget": 16.8,
+ "wall_sec": 723
+}

@@ -1,0 +1,29 @@
+{
+ "n": 300,
+ "full": 246,
+ "full_pct": 82.0,
+ "cells_pct": 88.0,
+ "false_positive": 3,
+ "miss_all_none": 15,
+ "sec_mean": 3.23,
+ "sec_median": 1.01,
+ "sec_max": 26.56,
+ "min_4core_500": 6.7,
+ "stages": {
+  "0": 255,
+  "2": 11,
+  "1": 10,
+  "1.5": 4,
+  "4": 12,
+  "-1": 3,
+  "3": 5
+ },
+ "name": "t0.20_b0.50_u1.6",
+ "cfg": {
+  "thresh": 0.2,
+  "box": 0.5,
+  "unclip": 1.6
+ },
+ "budget": 16.8,
+ "wall_sec": 491
+}

@@ -1,0 +1,28 @@
+{
+ "n": 300,
+ "full": 264,
+ "full_pct": 88.0,
+ "cells_pct": 91.44,
+ "false_positive": 3,
+ "miss_all_none": 9,
+ "sec_mean": 2.82,
+ "sec_median": 0.99,
+ "sec_max": 25.89,
+ "min_4core_500": 5.9,
+ "stages": {
+  "0": 259,
+  "2": 3,
+  "1": 11,
+  "1.5": 18,
+  "4": 6,
+  "3": 3
+ },
+ "name": "V6_R4_fast_partial15",
+ "cfg": {
+  "thresh": 0.3,
+  "box": 0.5,
+  "unclip": 1.6
+ },
+ "budget": 16.8,
+ "wall_sec": 427
+}

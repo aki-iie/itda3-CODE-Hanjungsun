@@ -1,0 +1,26 @@
+# 데이터·산출물은 커밋하지 않는다
+val_images/
+sample_out/
+submission.csv
+experiments/*/images/
+experiments/gold300/results/*.jsonl
+# 파이썬·환경
+__pycache__/
+*.pyc
+.venv/
+.ipynb_checkpoints/
+.DS_Store
+
+# 시크릿 및 인증 정보
+.env
+.env.*
+credentials.json
+service-account*.json
+*.pem
+*.key
+*.p12
+*.pfx
+*secret*
+*token*
+.npmrc
+.pypirc

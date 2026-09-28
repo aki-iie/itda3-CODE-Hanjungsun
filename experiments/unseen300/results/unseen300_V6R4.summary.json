@@ -1,0 +1,27 @@
+{
+ "n": 300,
+ "full": 254,
+ "full_pct": 84.67,
+ "cells_pct": 89.0,
+ "false_positive": 1,
+ "miss_all_none": 8,
+ "sec_mean": 2.24,
+ "sec_median": 0.76,
+ "sec_max": 24.48,
+ "min_4core_500": 4.7,
+ "stages": {
+  "0": 270,
+  "1.5": 14,
+  "2": 9,
+  "4": 6,
+  "1": 1
+ },
+ "name": "unseen300_V6R4",
+ "cfg": {
+  "thresh": 0.3,
+  "box": 0.5,
+  "unclip": 1.6
+ },
+ "budget": 16.8,
+ "wall_sec": 340
+}

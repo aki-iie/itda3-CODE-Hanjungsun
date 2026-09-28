@@ -1,0 +1,27 @@
+{
+ "n": 100,
+ "full": 92,
+ "full_pct": 92.0,
+ "cells_pct": 94.0,
+ "false_positive": 0,
+ "miss_all_none": 1,
+ "sec_mean": 1.53,
+ "sec_median": 0.54,
+ "sec_max": 17.56,
+ "min_4core_500": 3.2,
+ "stages": {
+  "0": 89,
+  "1": 5,
+  "2": 1,
+  "4": 4,
+  "1.5": 1
+ },
+ "name": "custom100_V6R4",
+ "cfg": {
+  "thresh": 0.3,
+  "box": 0.5,
+  "unclip": 1.6
+ },
+ "budget": 16.8,
+ "wall_sec": 53
+}

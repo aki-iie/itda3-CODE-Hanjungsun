@@ -1,0 +1,27 @@
+{
+ "n": 100,
+ "full": 91,
+ "full_pct": 91.0,
+ "cells_pct": 93.67,
+ "false_positive": 0,
+ "miss_all_none": 1,
+ "sec_mean": 1.58,
+ "sec_median": 0.52,
+ "sec_max": 18.4,
+ "min_4core_500": 3.3,
+ "stages": {
+  "0": 89,
+  "1": 5,
+  "2": 1,
+  "4": 4,
+  "3": 1
+ },
+ "name": "custom100_base_prelim",
+ "cfg": {
+  "thresh": 0.3,
+  "box": 0.5,
+  "unclip": 1.6
+ },
+ "budget": 16.8,
+ "wall_sec": 55
+}

@@ -1,0 +1,29 @@
+{
+ "n": 300,
+ "full": 246,
+ "full_pct": 82.0,
+ "cells_pct": 87.67,
+ "false_positive": 4,
+ "miss_all_none": 14,
+ "sec_mean": 3.24,
+ "sec_median": 0.98,
+ "sec_max": 25.55,
+ "min_4core_500": 6.7,
+ "stages": {
+  "0": 257,
+  "2": 8,
+  "1": 10,
+  "1.5": 4,
+  "4": 13,
+  "-1": 3,
+  "3": 5
+ },
+ "name": "base_t0.30_b0.50_u1.6",
+ "cfg": {
+  "thresh": 0.3,
+  "box": 0.5,
+  "unclip": 1.6
+ },
+ "budget": 16.8,
+ "wall_sec": 494
+}

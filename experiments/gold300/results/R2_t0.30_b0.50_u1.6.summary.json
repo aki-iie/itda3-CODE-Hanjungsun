@@ -1,0 +1,28 @@
+{
+ "n": 300,
+ "full": 251,
+ "full_pct": 83.67,
+ "cells_pct": 88.78,
+ "false_positive": 3,
+ "miss_all_none": 13,
+ "sec_mean": 3.2,
+ "sec_median": 0.99,
+ "sec_max": 24.7,
+ "min_4core_500": 6.7,
+ "stages": {
+  "0": 258,
+  "1.5": 6,
+  "1": 10,
+  "3": 7,
+  "2": 6,
+  "4": 13
+ },
+ "name": "R2_t0.30_b0.50_u1.6",
+ "cfg": {
+  "thresh": 0.3,
+  "box": 0.5,
+  "unclip": 1.6
+ },
+ "budget": 16.8,
+ "wall_sec": 489
+}

@@ -1,0 +1,28 @@
+{
+ "n": 300,
+ "full": 262,
+ "full_pct": 87.33,
+ "cells_pct": 90.78,
+ "false_positive": 2,
+ "miss_all_none": 9,
+ "sec_mean": 2.76,
+ "sec_median": 0.94,
+ "sec_max": 26.4,
+ "min_4core_500": 5.7,
+ "stages": {
+  "0": 259,
+  "2": 5,
+  "1": 27,
+  "1.5": 1,
+  "4": 7,
+  "3": 1
+ },
+ "name": "V4_R4_fast",
+ "cfg": {
+  "thresh": 0.3,
+  "box": 0.5,
+  "unclip": 1.6
+ },
+ "budget": 16.8,
+ "wall_sec": 417
+}

@@ -1,0 +1,26 @@
+{
+ "n": 300,
+ "full": 254,
+ "full_pct": 84.67,
+ "cells_pct": 89.0,
+ "false_positive": 1,
+ "miss_all_none": 10,
+ "sec_mean": 2.96,
+ "sec_median": 1.18,
+ "sec_max": 26.65,
+ "min_4core_500": 6.2,
+ "stages": {
+  "0": 270,
+  "1.5": 9,
+  "2": 11,
+  "1": 10
+ },
+ "name": "unseen300_V6R4_py310_ort1232",
+ "cfg": {
+  "thresh": 0.3,
+  "box": 0.5,
+  "unclip": 1.6
+ },
+ "budget": 16.8,
+ "wall_sec": 450
+}

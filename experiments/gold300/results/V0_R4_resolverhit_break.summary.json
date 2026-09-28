@@ -1,0 +1,28 @@
+{
+ "n": 300,
+ "full": 263,
+ "full_pct": 87.67,
+ "cells_pct": 91.11,
+ "false_positive": 3,
+ "miss_all_none": 10,
+ "sec_mean": 3.24,
+ "sec_median": 1.06,
+ "sec_max": 25.76,
+ "min_4core_500": 6.7,
+ "stages": {
+  "0": 259,
+  "1": 12,
+  "2": 7,
+  "1.5": 4,
+  "4": 12,
+  "3": 6
+ },
+ "name": "V0_R4_resolverhit_break",
+ "cfg": {
+  "thresh": 0.3,
+  "box": 0.5,
+  "unclip": 1.6
+ },
+ "budget": 16.8,
+ "wall_sec": 495
+}
