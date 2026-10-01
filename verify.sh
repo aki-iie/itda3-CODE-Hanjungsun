@@ -17,6 +17,8 @@
 set -o pipefail
 cd "$(dirname "$0")"
 PY=${PYTHON:-python3.10}
+# download_weights.sh 도 PYTHON 변수를 읽는다. 가상환경 밖 파이썬이 넘어가지 않도록 여기서 지운다.
+unset PYTHON
 STAMP=$(date +%Y%m%d_%H%M%S)
 mkdir -p logs
 LOG="logs/verify_${STAMP}.log"
@@ -46,6 +48,16 @@ rm -f "$OUT_CSV" "$OUT_NB"
   bash download_weights.sh || { echo "[FAIL] download_weights.sh 실패"; exit 1; }
   echo
 
+  # 노트북 커널을 이 가상환경의 파이썬으로 고정한다. 사용자 전역에 등록된 python3 커널
+  # (다른 버전의 파이썬)이 대신 잡히면 노트북이 가상환경 밖에서 실행되기 때문이다.
+  # 채점 명령은 그대로 두고, 커널 탐색 경로만 가상환경으로 맞춘다.
+  python -m ipykernel install --prefix "$PWD/.venv" --name python3 --display-name "Python 3 (.venv)" >/dev/null 2>&1
+  export JUPYTER_PATH="$PWD/.venv/share/jupyter"
+  export JUPYTER_PREFER_ENV_PATH=1
+  VENV_PYVER=$(python -c 'import platform; print(platform.python_version())')
+  echo "# 노트북 커널: $(python -c 'import json,sys; print(json.load(open(sys.argv[1]))["argv"][0])' "$PWD/.venv/share/jupyter/kernels/python3/kernel.json") (Python $VENV_PYVER)"
+  echo
+
   echo "\$ ITDA_INPUT_DIR=./sample ITDA_OUTPUT_PATH=$OUT_CSV jupyter nbconvert --to notebook --execute predict.ipynb --output $OUT_NB"
   T0=$(date +%s)
   ITDA_INPUT_DIR=./sample ITDA_OUTPUT_PATH=$OUT_CSV jupyter nbconvert --to notebook --execute predict.ipynb --output $OUT_NB 2>&1 || { echo "[FAIL] nbconvert 실행 실패"; exit 1; }
@@ -69,7 +81,7 @@ PY
   sed 's/^/  /' "$OUT_CSV"
   echo
 
-  # 결과 판정: 자가 검증 ALL PASS + 행 수 = 샘플 수
+  # 결과 판정: 자가 검증 ALL PASS + 행 수 = 샘플 수 + 노트북이 가상환경 파이썬에서 실행됨
   N_IMG=$(ls sample | grep -E -i '\.(jpg|jpeg|png)$' | wc -l | tr -d ' ')
   N_ROW=$(( $(wc -l < "$OUT_CSV") - 1 ))
   PASS=$(python - "$OUT_NB" <<'PY'
@@ -79,8 +91,15 @@ txt = "".join("".join(o.get("text", [])) for c in nb["cells"] for o in c.get("ou
 print("1" if "[self-check] ALL PASS" in txt else "0")
 PY
 )
+  if grep -q "\[env\] python=$VENV_PYVER " <(python - "$OUT_NB" <<'PY'
+import json, sys
+nb = json.load(open(sys.argv[1], encoding="utf-8"))
+print("".join("".join(o.get("text", [])) for c in nb["cells"] for o in c.get("outputs", []) if o.get("output_type") == "stream"))
+PY
+); then KERNEL_OK=1; else KERNEL_OK=0; fi
+  echo "# 커널 확인: 노트북 실행 파이썬 $([ "$KERNEL_OK" = 1 ] && echo "= 가상환경 Python $VENV_PYVER" || echo "≠ 가상환경 Python $VENV_PYVER (전역 커널이 잡힘)")"
   echo "# 판정: 샘플 ${N_IMG}장 / 출력 ${N_ROW}행 / 자가 검증 $([ "$PASS" = 1 ] && echo 'ALL PASS' || echo 'FAIL')"
-  if [ "$PASS" = 1 ] && [ "$N_IMG" = "$N_ROW" ]; then
+  if [ "$PASS" = 1 ] && [ "$N_IMG" = "$N_ROW" ] && [ "$KERNEL_OK" = 1 ]; then
     echo "# 결과: PASS"
   else
     echo "# 결과: FAIL"; exit 1

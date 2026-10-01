@@ -49,7 +49,7 @@ PYTHON=python3.10 bash verify.sh    # python3.10 이 PATH 에 없으면 경로 �
 | 로그 | 환경 | 결과 |
 |---|---|---|
 | `logs/verify_20260928_153807.log` | Ubuntu x86_64, Python 3.10.20, 2코어 | 5장 / 5행, ALL PASS |
-| `logs/run_sample_20260924.log` | macOS VM aarch64, Python 3.10.12, 4코어 | 5장 / 5행, ALL PASS |
+| `logs/verify_20261001_235013.log` | macOS arm64, Python 3.10.20, 10코어 (최종 코드) | 5장 / 5행, ALL PASS, 커널 = 가상환경 Python 확인 |
 
 ## 3. 저장소 구조
 

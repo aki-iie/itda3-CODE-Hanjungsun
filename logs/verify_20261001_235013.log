@@ -1,29 +1,29 @@
-# 본선 제출 전 실행 검증 로그 — 2026-10-01 11:26:12
+# 본선 제출 전 실행 검증 로그 — 2026-10-01 23:50:13
 # 환경: Darwin arm64 / cpu 10 / Python 3.10.20
-# 커밋: 847be1856523e958f1f7295c9f6482d08eb38eec
+# 커밋: 39de9a1e6701e3344277dbcd577c9a613838f449
 
-$ /Users/akiie/.local/bin/python3.10 -m venv .venv && source .venv/bin/activate
+$ python3.10 -m venv .venv && source .venv/bin/activate
   python: Python 3.10.20  (/Users/akiie/Desktop/제출코드_itda3-CODE-Hanjungsun_0927/.venv/bin/python)
 
 $ pip install -r requirements.txt
-  Downloading rpds_py-0.30.0-cp310-cp310-macosx_11_0_arm64.whl (359 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 359.8/359.8 kB 22.5 MB/s eta 0:00:00
 Collecting attrs>=22.2.0
-  Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.5/67.5 kB 7.9 MB/s eta 0:00:00
+  Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Collecting rpds-py>=0.25.0
+  Using cached rpds_py-0.30.0-cp310-cp310-macosx_11_0_arm64.whl (359 kB)
+Collecting referencing>=0.28.4
+  Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
 Collecting jsonschema-specifications>=2023.03.6
-  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
 Collecting ptyprocess>=0.5
-  Downloading ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+  Using cached ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
 Collecting wcwidth>=0.1.4
-  Downloading wcwidth-0.9.1-cp310-abi3-macosx_11_0_arm64.whl (609 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 609.0/609.0 kB 35.0 MB/s eta 0:00:00
+  Using cached wcwidth-0.9.1-cp310-abi3-macosx_11_0_arm64.whl (609 kB)
 Collecting asttokens>=2.1.0
-  Downloading asttokens-3.0.2-py3-none-any.whl (28 kB)
-Collecting executing>=1.2.0
-  Downloading executing-2.2.1-py2.py3-none-any.whl (28 kB)
+  Using cached asttokens-3.0.2-py3-none-any.whl (28 kB)
 Collecting pure-eval
-  Downloading pure_eval-0.2.4-py3-none-any.whl (11 kB)
+  Using cached pure_eval-0.2.4-py3-none-any.whl (11 kB)
+Collecting executing>=1.2.0
+  Using cached executing-2.2.1-py2.py3-none-any.whl (28 kB)
 Installing collected packages: pure-eval, ptyprocess, mpmath, flatbuffers, webencodings, wcwidth, typing_extensions, traitlets, tornado, sympy, soupsieve, six, rpds-py, pyzmq, PyYAML, pygments, pyclipper, psutil, protobuf, platformdirs, Pillow, pexpect, parso, pandocfilters, packaging, numpy, nest-asyncio, markupsafe, jupyterlab-pygments, humanfriendly, fastjsonschema, executing, defusedxml, decorator, debugpy, comm, attrs, asttokens, appnope, tinycss2, stack_data, Shapely, referencing, python-dateutil, prompt_toolkit, opencv-python-headless, opencv-python, mistune, matplotlib-inline, jupyter-core, jinja2, jedi, exceptiongroup, coloredlogs, bleach, beautifulsoup4, onnxruntime, jupyter-client, jsonschema-specifications, ipython, rapidocr-onnxruntime, jsonschema, ipykernel, nbformat, nbclient, nbconvert
 Successfully installed Pillow-10.4.0 PyYAML-6.0.3 Shapely-2.1.2 appnope-1.0.0 asttokens-3.0.2 attrs-26.1.0 beautifulsoup4-4.15.0 bleach-6.4.0 coloredlogs-15.0.1 comm-0.2.3 debugpy-1.8.22 decorator-5.3.1 defusedxml-0.7.1 exceptiongroup-1.3.1 executing-2.2.1 fastjsonschema-2.22.2 flatbuffers-25.12.19 humanfriendly-10.0 ipykernel-6.29.5 ipython-8.39.0 jedi-0.20.0 jinja2-3.1.6 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 jupyter-client-8.10.0 jupyter-core-5.9.1 jupyterlab-pygments-0.3.0 markupsafe-3.0.3 matplotlib-inline-0.2.2 mistune-3.3.4 mpmath-1.3.0 nbclient-0.11.0 nbconvert-7.16.4 nbformat-5.11.1 nest-asyncio-1.6.0 numpy-1.26.4 onnxruntime-1.23.2 opencv-python-4.11.0.86 opencv-python-headless-4.9.0.80 packaging-26.3 pandocfilters-1.5.1 parso-0.8.7 pexpect-4.9.0 platformdirs-4.12.2 prompt_toolkit-3.0.53 protobuf-7.36.2 psutil-7.2.2 ptyprocess-0.7.0 pure-eval-0.2.4 pyclipper-1.4.0 pygments-2.21.0 python-dateutil-2.9.0.post0 pyzmq-27.2.0 rapidocr-onnxruntime-1.3.24 referencing-0.37.0 rpds-py-0.30.0 six-1.17.0 soupsieve-2.10 stack_data-0.6.3 sympy-1.14.0 tinycss2-1.5.1 tornado-6.5.10 traitlets-5.16.1 typing_extensions-4.16.0 wcwidth-0.9.1 webencodings-0.6.1
   설치된 패키지(pip freeze):
@@ -96,37 +96,28 @@ Successfully installed Pillow-10.4.0 PyYAML-6.0.3 Shapely-2.1.2 appnope-1.0.0 as
 
 $ bash download_weights.sh
 [weights] 번들 모델 확인
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-ModuleNotFoundError: No module named 'rapidocr_onnxruntime'
+[weights]   ch_PP-OCRv4_det_infer.onnx                 4.7 MB
+[weights]   ch_PP-OCRv4_rec_infer.onnx                10.9 MB
+[weights]   ch_ppocr_mobile_v2.0_cls_infer.onnx        0.6 MB
+[weights] OK — 다운로드 불필요 (휠 내장)
 [cv2] 최종 설치본이 headless 인지 확인
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-ModuleNotFoundError: No module named 'cv2'
-[cv2] GUI 빌드가 활성 → headless 로 재설치 시도
-error: externally-managed-environment
+[cv2] headless OK
+[cv2] import OK 4.11.0
 
-× This environment is externally managed
-╰─> This Python installation is managed by uv and should not be modified.
-
-note: If you believe this is a mistake, please contact your Python installation or OS distribution provider. You can override this, at the risk of breaking your Python installation or OS, by passing --break-system-packages.
-hint: See PEP 668 for the detailed specification.
-[cv2] ⚠️ 재설치 실패(네트워크/캐시 없음). libGL 이 있는 환경이면 GUI 빌드로도 동작합니다.
-[cv2] ⚠️ import cv2 실패 — apt-get install -y libgl1 후 재시도
+# 노트북 커널: /Users/akiie/Desktop/제출코드_itda3-CODE-Hanjungsun_0927/.venv/bin/python (Python 3.10.20)
 
 $ ITDA_INPUT_DIR=./sample ITDA_OUTPUT_PATH=/tmp/out.csv jupyter nbconvert --to notebook --execute predict.ipynb --output /tmp/executed.ipynb
 [NbConvertApp] Converting notebook predict.ipynb to notebook
-[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.
-[NbConvertApp] Writing 12346 bytes to /tmp/executed.ipynb
-  소요 13초
+[NbConvertApp] Writing 12349 bytes to /tmp/executed.ipynb
+  소요 12초
 
 # 노트북 셀 출력:
-  [env] python=3.14.3  cpu=10  workers=4
-  [env] cv2 5.0.0 OK
+  [env] python=3.10.20  cpu=10  workers=4
+  [env] cv2 4.11.0 OK
   [env] rapidocr 번들 모델 3개 (오프라인 OK)
   [input] ./sample → 5장
   [env] runner 로드 완료
-  [run] 5행 | 총 7.6s | 장당 1.51s | 예외 0건
+  [run] 5행 | 총 7.7s | 장당 1.54s | 예외 0건
   [run] 사다리 단계 분포: {0: 2, 1.5: 2, 4: 1}
   [save] /tmp/out.csv  (5행)
   [self-check]
@@ -146,5 +137,6 @@ $ ITDA_INPUT_DIR=./sample ITDA_OUTPUT_PATH=/tmp/out.csv jupyter nbconvert --to n
   001033,2019,07,16,2019-07-16
   002088,2021,09,03,2021-09-03
 
+# 커널 확인: 노트북 실행 파이썬 = 가상환경 Python 3.10.20
 # 판정: 샘플 5장 / 출력 5행 / 자가 검증 ALL PASS
 # 결과: PASS
